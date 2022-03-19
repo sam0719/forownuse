@@ -387,7 +387,7 @@ for i in range(seven_gate_begin,seven_gate_end+1):
 ###########4-4#################
                         content.attach(MIMEText("\r\n"))#換行:\r\n
 content.attach(MIMEText("----------------------------\r\n"))
-content.attach(MIMEText("如果上面沒有內容就是沒有解"))
+content.attach(MIMEText(f"如果上面沒有內容就是沒有解,時間:{(datetime.datetime.now() - starttime).seconds}"))
 with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
     try:
         smtp.ehlo()  # 驗證SMTP伺服器
